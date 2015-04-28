@@ -5,4 +5,5 @@ nrpe_check "check_mailq" do
   warning_condition 10
   critical_condition 15
   action :add
+  notifies :restart, "service[#{node['nrpe']['service_name']}]"
 end
