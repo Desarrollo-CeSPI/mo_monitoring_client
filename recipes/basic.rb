@@ -14,17 +14,17 @@ end
 
 nrpe_check "check_mem" do
   command "#{node['mo_monitoring_client']['install_directory']}/check_mem.sh"
-  warning_condition 85
-  critical_condition 90
+  warning_condition node['mo_monitoring_client']['plugins']['check_mem']['warning_condition']
+  critical_condition node['mo_monitoring_client']['plugins']['check_mem']['critical_condition']
   action :add
   notifies :restart, "service[#{node['nrpe']['service_name']}]"
 end
 
 nrpe_check "check_ifutil" do
   command "perl #{node['mo_monitoring_client']['install_directory']}/check_ifutil.pl"
-  warning_condition "50M"
-  critical_condition "65M"
-  parameters "-i venet0"
+  warning_condition node['mo_monitoring_client']['plugins']['check_ifutil']['warning_condition']
+  critical_condition node['mo_monitoring_client']['plugins']['check_ifutil']['critical_condition']
+  parameters node['mo_monitoring_client']['plugins']['check_ifutil']['parameters']
   action :add
   notifies :restart, "service[#{node['nrpe']['service_name']}]"
 end
@@ -39,17 +39,17 @@ end
 
 nrpe_check "check_disk" do
   command "#{node['nrpe']['plugin_dir']}/check_disk"
-  warning_condition "15%"
-  critical_condition "10%"
-  parameters "/"
+  warning_condition node['mo_monitoring_client']['plugins']['check_disk']['warning_condition']
+  critical_condition node['mo_monitoring_client']['plugins']['check_disk']['critical_condition']
+  parameters node['mo_monitoring_client']['plugins']['check_disk']['parameters']
   action :add
   notifies :restart, "service[#{node['nrpe']['service_name']}]"
 end
 
 nrpe_check "check_swap" do
   command "#{node['nrpe']['plugin_dir']}/check_swap"
-  warning_condition "15%"
-  critical_condition "10%"
+  warning_condition node['mo_monitoring_client']['plugins']['check_swap']['warning_condition']
+  critical_condition node['mo_monitoring_client']['plugins']['check_swap']['critical_condition']
   action :add
   notifies :restart, "service[#{node['nrpe']['service_name']}]"
 end
