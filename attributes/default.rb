@@ -2,7 +2,8 @@
 default["mo_monitoring_client"]["install_directory"]                               = "/opt/nagios"
 
 # List of required packages to be installed.
-default["mo_monitoring_client"]["packages"]                                        = %w(bc nagios-plugins-extra)
+default["mo_monitoring_client"]["packages"]                                        = %w(bc)
+default["mo_monitoring_client"]["packages"] << "nagios-plugins-extra" if node['platform'] == 'ubuntu'
 
 # Plugins parameters.
 default['mo_monitoring_client']['plugins']['check_mem']['warning_condition']       = 85
