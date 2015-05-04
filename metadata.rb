@@ -5,6 +5,6 @@ license          'MIT'
 description      'Installs/Configures mo_monitoring_client'
 long_description 'Installs/Configures mo_monitoring_client'
 
-version          '1.0.1'
+version          '1.0.2'
 
 depends 'nrpe', '~> 1.5.0'
