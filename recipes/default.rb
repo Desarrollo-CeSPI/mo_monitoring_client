@@ -1,6 +1,5 @@
-node.set["nrpe"]["multi_environment_monitoring"] = true
-node.set["nrpe"]["server_role"] = "monitoring"
-
-include_recipe 'nrpe::default'
-
-directory node["mo_monitoring_client"]["install_directory"]
+include_recipe 'mo_monitoring_client::_reqs'
+include_recipe 'mo_monitoring_client::basic'
+include_recipe 'mo_monitoring_client::fpm'
+include_recipe 'mo_monitoring_client::mail'
+include_recipe 'mo_monitoring_client::nginx'
