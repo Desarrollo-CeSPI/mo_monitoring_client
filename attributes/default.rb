@@ -2,7 +2,7 @@
 default["mo_monitoring_client"]["install_directory"]                               = "/opt/nagios"
 
 # List of required packages to be installed.
-default["mo_monitoring_client"]["packages"]                                        = %w(bc)
+default["mo_monitoring_client"]["packages"]                                        = %w(bc liblwp-useragent-determined-perl)
 default["mo_monitoring_client"]["packages"] << "nagios-plugins-extra" if node['platform'] == 'ubuntu'
 
 # Plugins parameters.
