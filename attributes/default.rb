@@ -11,7 +11,6 @@ default['mo_monitoring_client']['plugins']['check_mem']['critical_condition']   
 
 default['mo_monitoring_client']['plugins']['check_ifutil']['warning_condition']    = "50M"
 default['mo_monitoring_client']['plugins']['check_ifutil']['critical_condition']   = "65M"
-default['mo_monitoring_client']['plugins']['check_ifutil']['parameters']           = "-i venet0"
 
 default['mo_monitoring_client']['plugins']['check_disk']['warning_condition']      = "15%"
 default['mo_monitoring_client']['plugins']['check_disk']['critical_condition']     = "10%"

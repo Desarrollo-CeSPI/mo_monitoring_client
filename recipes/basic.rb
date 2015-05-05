@@ -24,7 +24,7 @@ nrpe_check "check_ifutil" do
   command "perl #{node['mo_monitoring_client']['install_directory']}/check_ifutil.pl"
   warning_condition node['mo_monitoring_client']['plugins']['check_ifutil']['warning_condition']
   critical_condition node['mo_monitoring_client']['plugins']['check_ifutil']['critical_condition']
-  parameters node['mo_monitoring_client']['plugins']['check_ifutil']['parameters']
+  parameters "-i #{node["network"]["default_interface"]}"
   action :add
   notifies :restart, "service[#{node['nrpe']['service_name']}]"
 end
