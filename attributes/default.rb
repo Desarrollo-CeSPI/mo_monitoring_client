@@ -25,3 +25,6 @@ default['mo_monitoring_client']['plugins']['check_nginx']['parameters']         
 
 default['mo_monitoring_client']['fpm']['check_status'] = 'check_phpfpm_status'
 default['mo_monitoring_client']['fpm']['check_status_command'] = "#{node['mo_monitoring_client']['fpm']['check_status']}.pl"
+
+default['mo_monitoring_client']['plugins']['check_mysql']['slave']['warning_condition']   = 1
+default['mo_monitoring_client']['plugins']['check_mysql']['slave']['critical_condition']  = 5
