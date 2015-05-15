@@ -28,3 +28,6 @@ default['mo_monitoring_client']['fpm']['check_status_command']                  
 
 default['mo_monitoring_client']['plugins']['check_mysql']['slave']['warning_condition']    = 1
 default['mo_monitoring_client']['plugins']['check_mysql']['slave']['critical_condition']   = 5
+
+default['mo_monitoring_client']['plugins']['check_load']['warning_condition']              = nil
+default['mo_monitoring_client']['plugins']['check_load']['critical_condition']             = nil
