@@ -31,8 +31,8 @@ end
 
 nrpe_check "check_load" do
   command "#{node['nrpe']['plugin_dir']}/check_load"
-  warning_condition (node["cpu"]["total"].to_i*0.9).to_s
-  critical_condition node["cpu"]["total"]
+  warning_condition node['mo_monitoring_client']['plugins']['check_load']['warning_condition'] || (node["cpu"]["total"].to_i*0.9).to_s
+  critical_condition node['mo_monitoring_client']['plugins']['check_load']['critical_condition'] || node["cpu"]["total"]
   action :add
   notifies :restart, "service[#{node['nrpe']['service_name']}]"
 end
