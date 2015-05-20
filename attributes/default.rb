@@ -31,3 +31,7 @@ default['mo_monitoring_client']['plugins']['check_mysql']['slave']['critical_con
 
 default['mo_monitoring_client']['plugins']['check_load']['warning_condition']              = nil
 default['mo_monitoring_client']['plugins']['check_load']['critical_condition']             = nil
+
+default['mo_monitoring_client']['plugins']['check_ssl_cert']['warning_condition']          = 90
+default['mo_monitoring_client']['plugins']['check_ssl_cert']['critical_condition']         = 30
+default['mo_monitoring_client']['plugins']['check_ssl_cert']['parameters']                 = "-A -H $ARG1$"
