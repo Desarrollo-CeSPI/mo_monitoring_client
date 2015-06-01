@@ -2,6 +2,15 @@
 
 Cookbook for monitoring servers.
 
+## Warning
+
+Elasticsearch monitoring script was intentionally modified to ignore yellow
+state as we currently do not want to receive warnings when having no cluster.
+
+## Scripts
+
+* Elasticsearch: https://github.com/orthecreedence/check_elasticsearch
+
 ## License
 
 The MIT License (MIT)
