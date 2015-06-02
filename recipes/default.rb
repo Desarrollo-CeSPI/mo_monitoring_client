@@ -1,4 +1,5 @@
 include_recipe 'mo_monitoring_client::_reqs'
+include_recipe 'mo_monitoring_client::apt'
 include_recipe 'mo_monitoring_client::basic'
 include_recipe 'mo_monitoring_client::elasticsearch'
 include_recipe 'mo_monitoring_client::fpm'
