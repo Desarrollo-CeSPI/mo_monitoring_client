@@ -19,8 +19,8 @@ default['mo_monitoring_client']['plugins']['check_disk']['parameters']          
 default['mo_monitoring_client']['plugins']['check_swap']['warning_condition']              = "15%"
 default['mo_monitoring_client']['plugins']['check_swap']['critical_condition']             = "10%"
 
-default['mo_monitoring_client']['plugins']['check_nginx']['warning_condition']             = 10
-default['mo_monitoring_client']['plugins']['check_nginx']['critical_condition']            = 20
+default['mo_monitoring_client']['plugins']['check_nginx']['warning_condition']             = 20
+default['mo_monitoring_client']['plugins']['check_nginx']['critical_condition']            = 30
 default['mo_monitoring_client']['plugins']['check_nginx']['parameters']                    = "-P 8090"
 
 default['mo_monitoring_client']['fpm']['check_status']                                     = 'check_phpfpm_status'
