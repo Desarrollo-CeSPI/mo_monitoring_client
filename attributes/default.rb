@@ -36,10 +36,10 @@ default['mo_monitoring_client']['plugins']['check_ssl_cert']['warning_condition'
 default['mo_monitoring_client']['plugins']['check_ssl_cert']['critical_condition']         = 30
 default['mo_monitoring_client']['plugins']['check_ssl_cert']['parameters']                 = "-A -H $ARG1$"
 
-default['mo_monitoring_client']['plugins']['check_io_queue']['warning_condition']          = 100
-default['mo_monitoring_client']['plugins']['check_io_queue']['critical_condition']         = 135
+default['mo_monitoring_client']['plugins']['check_io_queue']['warning_condition']          = "99999,95"
+default['mo_monitoring_client']['plugins']['check_io_queue']['critical_condition']         = "99999,115"
 default['mo_monitoring_client']['plugins']['check_io_queue']['parameters']                 = "-q -d sda"
 
-default['mo_monitoring_client']['plugins']['check_io_waiting_time']['warning_condition']   = 400
-default['mo_monitoring_client']['plugins']['check_io_waiting_time']['critical_condition']  = 500
+default['mo_monitoring_client']['plugins']['check_io_waiting_time']['warning_condition']   = 250
+default['mo_monitoring_client']['plugins']['check_io_waiting_time']['critical_condition']  = 350
 default['mo_monitoring_client']['plugins']['check_io_waiting_time']['parameters']          = "-W -d sda"
