@@ -1,5 +1,6 @@
 include_recipe 'mo_monitoring_client::_reqs'
 include_recipe 'mo_monitoring_client::apt'
+include_recipe 'mo_monitoring_client::file'
 include_recipe 'mo_monitoring_client::basic'
 include_recipe 'mo_monitoring_client::disk_io'
 include_recipe 'mo_monitoring_client::elasticsearch'
