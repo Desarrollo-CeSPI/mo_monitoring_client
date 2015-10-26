@@ -43,3 +43,5 @@ default['mo_monitoring_client']['plugins']['check_io_queue']['parameters']      
 default['mo_monitoring_client']['plugins']['check_io_waiting_time']['warning_condition']   = 250
 default['mo_monitoring_client']['plugins']['check_io_waiting_time']['critical_condition']  = 350
 default['mo_monitoring_client']['plugins']['check_io_waiting_time']['parameters']          = "-W -d sda"
+
+default['mo_monitoring_client']['plugins']['check_dns']['parameters']                      = "-c example.com a 127.0.0.1"
