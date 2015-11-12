@@ -45,3 +45,5 @@ default['mo_monitoring_client']['plugins']['check_io_waiting_time']['critical_co
 default['mo_monitoring_client']['plugins']['check_io_waiting_time']['parameters']          = "-W -d sda"
 
 default['mo_monitoring_client']['plugins']['check_dns']['parameters']                      = "-c example.com a 127.0.0.1"
+
+default['mo_monitoring_client']['plugins']['check_smtp']['parameters']                     = "-H #{node['fqdn']} -C 'ehlo monitoring' -e '220 #{node['fqdn']}'"
