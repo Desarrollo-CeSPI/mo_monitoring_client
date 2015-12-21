@@ -34,7 +34,7 @@ default['mo_monitoring_client']['plugins']['check_load']['critical_condition']  
 
 default['mo_monitoring_client']['plugins']['check_ssl_cert']['warning_condition']          = 90
 default['mo_monitoring_client']['plugins']['check_ssl_cert']['critical_condition']         = 30
-default['mo_monitoring_client']['plugins']['check_ssl_cert']['parameters']                 = "-A -H $ARG1$"
+default['mo_monitoring_client']['plugins']['check_ssl_cert']['parameters']                 = "-A -H $ARG1$ -N"
 
 default['mo_monitoring_client']['plugins']['check_io_queue']['warning_condition']          = "99999,95"
 default['mo_monitoring_client']['plugins']['check_io_queue']['critical_condition']         = "99999,115"
